@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:saloon_koi/profileScreen.dart';
+import 'package:saloon_koi/serviceMenuScreen.dart';
+
+import 'bookingScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +30,11 @@ class HomeScreen extends StatelessWidget {
             child: ListTile(
               title: Text("Book an Appointment"),
               onTap: () {
-                // Navigate to booking screen
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BookingScreen(),
+                    ));
               },
             ),
           ),
@@ -34,7 +42,11 @@ class HomeScreen extends StatelessWidget {
             child: ListTile(
               title: Text("View Services"),
               onTap: () {
-                // Navigate to service menu
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ServiceMenuScreen(),
+                    ));
               },
             ),
           ),
@@ -42,7 +54,11 @@ class HomeScreen extends StatelessWidget {
             child: ListTile(
               title: Text("My Profile"),
               onTap: () {
-                // Navigate to user profile
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProfileScreen(),
+                    )); // Navigate to user profile
               },
             ),
           ),
